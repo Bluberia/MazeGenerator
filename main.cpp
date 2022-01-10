@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <stdexcept>
+#include "grid.h"
 
 using namespace std;
 
@@ -56,7 +57,8 @@ int main() {
     int height;
 
     getInfo(&width, &height);
-    displayMaze(width, height);
-
+    Grid grid = Grid(width, height);
+    grid.generateMaze();
+    //displayMaze(width, height);
     return 0;
 }
