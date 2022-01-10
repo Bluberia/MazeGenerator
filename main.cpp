@@ -32,26 +32,6 @@ void getInfo(int *width, int *height) {
     }
 }
 
-void displayMaze(int width, int height) {
-    for (int column = 0; column < width + 2; ++column) {
-        cout << "#";
-    }
-    cout << "\n";
-
-    for (int row = 0; row < height; ++row) {
-        cout << "#";
-        for (int column = 0; column < width; ++column) {
-            cout << ".";
-        }
-        cout << "#\n";
-    }
-
-    for (int column = 0; column < width + 2; ++column) {
-        cout << "#";
-    }
-    cout << "\n";
-}
-
 int main() {
     int width;
     int height;
@@ -59,6 +39,6 @@ int main() {
     getInfo(&width, &height);
     Grid grid = Grid(width, height);
     grid.generateMaze();
-    //displayMaze(width, height);
+
     return 0;
 }

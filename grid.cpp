@@ -45,11 +45,22 @@ void Grid::generateMaze() {
 }
 
 void Grid::render() {
+    for (int i = 0; i < this->width + 2; i++)
+        cout << "#";
+    cout << "\n";
     for (Cell c: this->cells) {
         if (c.getColumn() == 0 && c.getRow() != 0)
             cout << "\n";
+        if (c.getColumn() == 0)
+            cout << "#";
         cout << c.getContent();
+        if (c.getColumn() == this->width - 1)
+            cout << "#";
     }
+    cout << "\n";
+    for (int i = 0; i < this->width + 2; i++)
+        cout << "#";
+    cout << "\n";
 }
 
 Cell *Grid::findNextCell() {

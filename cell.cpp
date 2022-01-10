@@ -29,5 +29,5 @@ void Cell::print() const {
 }
 
 void Cell::setEmpty() {
-
+    content = 'o';
 }
